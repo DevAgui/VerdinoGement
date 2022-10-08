@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="12" class="ion-align-self-center">
+          <ion-title>
+            VerdinoGement
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Assign tasks</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img src="../../../assets/assign-tasks.png" alt="">
+            </ion-card-content>
+            <ion-button routerLink="/assign-tasks">
+              Assign
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>View Assigned tasks</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img src="../../../assets/view-tasks.png" alt="">
+            </ion-card-content>
+            <ion-button routerLink="/view-tasks">
+              View
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Manage tasks</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img src="../../../assets/manage-tasks.png" alt="">
+            </ion-card-content>
+            <ion-button routerLink="/manage-tasks">
+              Manage tasks
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Manage people</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <img src="../../../assets/manage-people.jpg" alt="">
+            </ion-card-content>
+            <ion-button routerLink="/manage-people">
+              Manage
+            </ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
