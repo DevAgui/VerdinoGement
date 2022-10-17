@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from 'src/app/models/person-model';
+import { PeopleService } from 'src/app/services/people-service';
 
 @Component({
   selector: 'app-manage-people',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagePeoplePage implements OnInit {
 
-  constructor() { }
+  _person:Person[];
+  constructor(private personSrv:PeopleService) { }
+
 
   ngOnInit() {
   }
 
+  getPeople():Person[]{ 
+    return this.personSrv.getPeople(); 
+  }
+  
 }

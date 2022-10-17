@@ -1,5 +1,13 @@
 <ion-card>
-  <ion-card-header>
-    <h1>Hi</h1>
-  </ion-card-header>
+  <ion-card-title>
+    Name:{{people.name}},
+    Surname:{{people.surname}}
+  </ion-card-title>
+  <ion-card-content>
+    <ion-item slot="header" color="light">
+      <ion-label>
+        Nickname:{{people.nickname}}
+      </ion-label>
+    </ion-item>
+  </ion-card-content>
 </ion-card>

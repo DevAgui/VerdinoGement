@@ -4,10 +4,16 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title>manage-people</ion-title>
+    <ion-title>Manage-people</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col sizeXl="8" sizeLg="10" sizeMd="12" class="ion-align-self-center">
+        <app-person *ngFor="let p of getPeople()" [people]="p"></app-person>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

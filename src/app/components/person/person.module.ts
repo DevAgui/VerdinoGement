@@ -5,12 +5,9 @@ import { RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PersonComponent } from './person.component';
 
 @NgModule({
     imports: [ CommonModule, FormsModule, IonicModule, RouterModule],
-    declarations: [PersonComponent],
-    exports: [PersonComponent]
 })
 
 export class PeopleComponentModule {}

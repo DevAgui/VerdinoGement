@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ManagePeoplePageRoutingModule } from './manage-people-routing.module';
 
 import { ManagePeoplePage } from './manage-people.page';
+import { PersonComponent } from 'src/app/components/person/person.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ManagePeoplePageRoutingModule
+    ManagePeoplePageRoutingModule 
   ],
-  declarations: [ManagePeoplePage]
+  declarations: [ManagePeoplePage, PersonComponent]
 })
 export class ManagePeoplePageModule {}
