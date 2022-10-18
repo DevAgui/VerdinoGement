@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Person } from 'src/app/models/person-model';
-import { IonicModule } from '@ionic/angular';
 import { PeopleService } from 'src/app/services/people-service';
 
 @Component({
@@ -9,13 +8,25 @@ import { PeopleService } from 'src/app/services/people-service';
   styleUrls: ['./person.component.scss'],
 })
 export class PersonComponent implements OnInit {
-
+  
+  @Output() onEdit = new EventEmitter;
+  @Output() onDelete = new EventEmitter;
   @Input() people: Person;
   
   constructor(
-    peopleSvc:PeopleService
+    peopleSvc:PeopleService,
   ) { }
 
   ngOnInit() {}
 
+  onEditClick(){
+    
+    this.onEdit.emit(this.people);
+  }
+
+  onDeleteClick(){
+    this.onDelete.emit(this.people);
+  }
+  
 }
+

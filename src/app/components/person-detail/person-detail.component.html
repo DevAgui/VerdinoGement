@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Person details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDismiss(null)">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">
+        Name
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce your name" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Surname
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce your surname" formControlName="surname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Nickname
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce your nickname" formControlName="nickname"></ion-input>
+    </ion-item>
+    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
+  </form>
+</ion-content>

@@ -1,13 +1,12 @@
 <ion-card>
-  <ion-card-title>
-    Name:{{people.name}},
-    Surname:{{people.surname}}
-  </ion-card-title>
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"/>
+  <ion-card-header>
+    <ion-card-title>{{people.name}} {{people.surname}}</ion-card-title>
+  </ion-card-header>
+
   <ion-card-content>
-    <ion-item slot="header" color="light">
-      <ion-label>
-        Nickname:{{people.nickname}}
-      </ion-label>
-    </ion-item>
+    This is the Nickname of {{people.name}}: {{people.nickname}}
   </ion-card-content>
+  <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="create-outline" ></ion-icon></ion-button>
+  <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5" name="trash-outline" ></ion-icon></ion-button>
 </ion-card>
