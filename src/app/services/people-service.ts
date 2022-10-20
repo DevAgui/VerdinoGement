@@ -11,19 +11,19 @@ export class PeopleService {
       id:1,
       name:"Diego",
       surname:"Aguilera",
-      nickname:"Folktergeist"
+      position:"Cocinero jefe"
     },
     {
       id:2,
       name:"Álvaro",
       surname:"Linero",
-      nickname:"Verdino"
+      position:"Auxiliar"
     },
     {
       id:3,
       name:"Sergio",
       surname:"Domínguez",
-      nickname:"Montsy"
+      position:"Cocinero"
     }
   ];
   
@@ -52,7 +52,7 @@ export class PeopleService {
     if(_person){
       _person.name = person.name;
       _person.surname = person.surname;
-      _person.nickname = person.nickname;
+      _person.position = person.position;
       _person.picture = person.picture;
     }
     

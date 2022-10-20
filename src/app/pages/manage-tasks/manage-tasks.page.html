@@ -4,10 +4,20 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title>Manage-tasks</ion-title>
+    <ion-title>Administrar comandas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-item>
+    <ion-button (click)="onNewTask()" style="margin:10px;width:50px;height:50px;--border-radius:50%" slot="start" icon-only><ion-icon style="zoom:3" name="add-outline"></ion-icon></ion-button>
+    <ion-text>Añade una nueva comanda</ion-text>
+  </ion-item>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col sizeXl="8" sizeLg="10" sizeMd="12" class="ion-align-self-center">
+        <app-task *ngFor="let t of getTask()" [task]="t" (onEdit)="onEditTask($event)" (onDelete)="onDeleteTask($event)"></app-task>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

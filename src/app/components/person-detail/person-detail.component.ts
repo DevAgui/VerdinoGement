@@ -17,7 +17,7 @@ export class PersonDetailComponent implements OnInit {
       this.form.controls.id.setValue(person.id);
       this.form.controls.name.setValue(person.name);
       this.form.controls.surname.setValue(person.surname);
-      this.form.controls.nickname.setValue(person.nickname);
+      this.form.controls.position.setValue(person.position);
       this.form.controls.picture.setValue(person.picture);
       this.mode = "Edit";
     }
@@ -32,7 +32,7 @@ export class PersonDetailComponent implements OnInit {
       id:[null],
       name:['', [Validators.required]],
       surname:['', [Validators.required]],
-      nickname:['', [Validators.required]],
+      position:['', [Validators.required]],
       picture:['']
     });
   }

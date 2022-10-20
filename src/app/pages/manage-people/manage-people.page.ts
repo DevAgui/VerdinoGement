@@ -63,17 +63,17 @@ export class ManagePeoplePage implements OnInit {
 
   async onDeleteAlert(person){
     const alert = await this.alert.create({
-      header: 'Do you really want to eliminate this person?',
+      header: '¿Seguro que quieres eliminar a este camarero?',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Cancelar',
           role: 'cancel',
           handler: () => {
-            console.log("Cancelled");
+            console.log("Cancelado");
           },
         },
         {
-          text: 'Delete',
+          text: 'Eliminar',
           role: 'confirm',
           handler: () => {
             this.personSrv.deletePersonById(person.id);
