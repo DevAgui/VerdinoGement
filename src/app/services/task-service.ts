@@ -10,20 +10,23 @@ export class TaskService {
     {
       id:1,
       name:"Bocadillo de tortilla",
-      description:"Hecho con pan horneado en el día de nuestras panificadoras proveedoras, con su tortilla hecha al punto ideal para los amantes de la tortilla. Es lo que más se piden nuestros clientes.",
-      quantity:1
+      description:"Para los amantes de la tortilla a cualquier hora.",
+      quantity:1,
+      picture:"../assets/tortilla.jpg"
     },
     {
       id:2,
       name:"Churros",
       description:"Churros hechos con cariño como los recuerdas con los mejores ingredientes.",
-      quantity:4
+      quantity:4,
+      picture:"../assets/churros.jpg"
     },
     {
       id:3,
       name:"Café bombón",
       description:"Café con leche condensada, para los más golosos.",
-      quantity:3
+      quantity:3,
+      picture:"../assets/cafe-bombon.jpg"
     }
   ];
   id:number = this._task.length+1;

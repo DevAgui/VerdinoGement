@@ -11,19 +11,22 @@ export class PeopleService {
       id:1,
       name:"Diego",
       surname:"Aguilera",
-      position:"Cocinero jefe"
+      position:"Cocinero",
+      picture:"https://thispersondoesnotexist.com/image"
     },
     {
       id:2,
       name:"Álvaro",
       surname:"Linero",
-      position:"Auxiliar"
+      position:"Auxiliar",
+      picture:"https://thispersondoesnotexist.com/image"
     },
     {
       id:3,
-      name:"Sergio",
+      name:"Fruela",
       surname:"Domínguez",
-      position:"Cocinero"
+      position:"Cocinera",
+      picture:"https://thispersondoesnotexist.com/image"  
     }
   ];
   
@@ -53,7 +56,6 @@ export class PeopleService {
       _person.name = person.name;
       _person.surname = person.surname;
       _person.position = person.position;
-      _person.picture = person.picture;
     }
     
   }
