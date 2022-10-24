@@ -1,0 +1,23 @@
+<ion-card>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col lass="ion-align-self-center">
+        <img alt="Our workers" src={{taskAssigned.workerPicture}} class="image">
+      </ion-col>
+      <ion-col lass="ion-align-self-center">
+        <ion-card-content>
+          <ion-card-title>{{people.name}} {{people.surname}}</ion-card-title>
+          <ion-text>Cargo de {{people.name}}: {{people.position}}</ion-text>
+        </ion-card-content>
+      </ion-col>
+      <ion-col>
+        <ion-button icon-only fill="clear" (click)="onEditClick()">
+          <ion-icon style="zoom:1.5" name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()">
+          <ion-icon style="zoom:1.5" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
