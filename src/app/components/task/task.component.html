@@ -2,16 +2,16 @@
   <ion-grid>
     <ion-row class="ion-align-items-center ion-justify-content-center">
       <ion-col lass="ion-align-self-center">
-        <img alt="Our workers" src={{task.picture}} class="image">
+        <img alt="Our workers" src={{task.taskImage}} class="image">
       </ion-col>
       <ion-col class="ion-align-self-center">
         <ion-card-content>
-          <ion-card-title>{{task.name}}</ion-card-title>
-          <ion-text>{{task.description}}</ion-text>
+          <ion-card-title>{{task.taskName}}</ion-card-title>
+          <ion-text>{{task.taskDescription}}</ion-text>
         </ion-card-content>
       </ion-col>
       <ion-col class="ion-align-self-center">
-        <ion-text>Cantidad: {{task.quantity}}</ion-text>
+        <ion-text>Cantidad en segundos: {{task.taskSeconds}}</ion-text>
       </ion-col>
       <ion-col>
         <ion-button icon-only fill="clear" (click)="onEditClick()">

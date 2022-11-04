@@ -12,51 +12,51 @@ export class PeopleService {
       name:"Diego",
       surname:"Aguilera",
       position:"Cocinero",
-      picture:"https://thispersondoesnotexist.com/image"
+      picture:"../assets/cocinero1.jpg"
     },
     {
       id:2,
       name:"Álvaro",
       surname:"Linero",
       position:"Auxiliar",
-      picture:"https://thispersondoesnotexist.com/image"
+      picture:"../assets/cocinero2.jpg"
     },
     {
       id:3,
       name:"Fruela",
       surname:"Domínguez",
       position:"Cocinera",
-      picture:"https://thispersondoesnotexist.com/image"  
+      picture:"../assets/cocinero3.jpg"  
     }
   ];
   
   id:number = this._people.length+1;
-  constructor(){}
-  
-  public getPeople() : Person[]{
+
+  constructor() { }
+
+  public getPeople(): Person[] {
     return this._people;
   }
 
-  public getPersonById(id:number){
+  public getPeopleById(id: number){
     return this._people.find(p=>p.id==id);
   }
 
-  public deletePersonById(id:number){
-    this._people = this._people.filter(p=>p.id != id); 
+  addUser(user: Person){
+    user.id = this.id++;
+    this._people.push(user);
   }
 
-  public addPerson(person:Person){
-    person.id = this.id++;
-    this._people.push(person);
-  }
-
-  public updatePerson(person:Person){
-    var _person = this._people.find(p=>p.id==person.id);
-    if(_person){
-      _person.name = person.name;
-      _person.surname = person.surname;
-      _person.position = person.position;
+  updateUser(user: Person){
+    var _user = this._people.find(p=>p.id==user.id);
+    if(_user){
+      _user.name = user.name;
+      _user.surname = user.surname;
     }
     
+  }
+
+  deleteUserById(id:number){
+    this._people = this._people.filter(p=>p.id != id); 
   }
 }

@@ -4,10 +4,20 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title>Assign-tasks</ion-title>
+    <ion-title>Administrar asignación de tareas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-item>
+    <ion-button (click)="onNewAssign()" style="margin:10px;width:50px;height:50px;--border-radius:50%" slot="start" icon-only><ion-icon style="zoom:3" name="add-outline"></ion-icon></ion-button>
+    <ion-text>Asigna una nueva tarea</ion-text>
+  </ion-item>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col sizeXl="8" sizeLg="10" sizeMd="12" class="ion-align-self-start">
+          <app-assignment *ngFor="let assign of getAssign()" [assign]="assign" (onEdit)="onEditAssign($event)" (onDelete)="onDeleteAssign($event)"></app-assignment>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

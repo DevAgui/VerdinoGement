@@ -37,10 +37,10 @@ export class ManagePeoplePage implements OnInit {
       if(result && result.data){
         switch(result.data.mode){
           case 'New':
-            this.personSrv.addPerson(result.data.person);
+            this.personSrv.addUser(result.data.person);
             break;
           case 'Edit':
-            this.personSrv.updatePerson(result.data.person);
+            this.personSrv.updateUser(result.data.person);
             break;
           default:
         }
@@ -76,7 +76,7 @@ export class ManagePeoplePage implements OnInit {
           text: 'Eliminar',
           role: 'confirm',
           handler: () => {
-            this.personSrv.deletePersonById(person.id);
+            this.personSrv.deleteUserById(person.id);
           },
         },
       ],

@@ -9,24 +9,24 @@ export class TaskService {
   private _task: Task[] = [
     {
       id:1,
-      name:"Bocadillo de tortilla",
-      description:"Para los amantes de la tortilla a cualquier hora.",
-      quantity:1,
-      picture:"../assets/tortilla.jpg"
+      taskName:"Bocadillo de tortilla",
+      taskDescription:"Para los amantes de la tortilla a cualquier hora.",
+      taskSeconds: 600,
+      taskImage:"../assets/tortilla.jpg"
     },
     {
       id:2,
-      name:"Churros",
-      description:"Churros hechos con cariño como los recuerdas con los mejores ingredientes.",
-      quantity:4,
-      picture:"../assets/churros.jpg"
+      taskName:"Churros",
+      taskDescription:"Churros hechos con cariño como los recuerdas con los mejores ingredientes.",
+      taskSeconds: 600,
+      taskImage:"../assets/churros.jpg"
     },
     {
       id:3,
-      name:"Café bombón",
-      description:"Café con leche condensada, para los más golosos.",
-      quantity:3,
-      picture:"../assets/cafe-bombon.jpg"
+      taskName:"Café bombón",
+      taskDescription:"Café con leche condensada, para los más golosos.",
+      taskSeconds: 300,
+      taskImage:"../assets/cafe-bombon.jpg"
     }
   ];
   id:number = this._task.length+1;
@@ -52,10 +52,10 @@ export class TaskService {
   public updateTask(task:Task){
     var _task = this._task.find(p=>p.id==task.id);
     if(_task){
-      _task.name = task.name;
-      _task.description= task.description;
-      _task.quantity= task.quantity;
-      _task.picture = task.picture;
+      _task.taskName = task.taskName;
+      _task.taskDescription= task.taskDescription;
+      _task.taskSeconds= task.taskSeconds;
+      _task.taskImage = task.taskImage;
     }
     
   }

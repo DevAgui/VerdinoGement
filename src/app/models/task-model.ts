@@ -1,8 +1,7 @@
-export interface Task{
-
-    id:number;
-    name:string;
-    description:string;
-    quantity:number;
-    picture?:string;
+export interface Task {
+    id: number;
+    taskName: string;
+    taskDescription: string;
+    taskSeconds: number;
+    taskImage?: string;
 }

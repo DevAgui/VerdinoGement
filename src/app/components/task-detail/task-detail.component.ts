@@ -16,9 +16,9 @@ export class TaskDetailComponent implements OnInit {
   @Input('task') set task(task:Task){
     if(task){
       this.form.controls.id.setValue(task.id);
-      this.form.controls.name.setValue(task.name);
-      this.form.controls.description.setValue(task.description);
-      this.form.controls.quantity.setValue(task.quantity);
+      this.form.controls.taskName.setValue(task.taskName);
+      this.form.controls.taskDescription.setValue(task.taskDescription);
+      this.form.controls.taskSeconds.setValue(task.taskSeconds);
       this.mode = "Edit";
     }
   }
@@ -30,10 +30,10 @@ export class TaskDetailComponent implements OnInit {
   ) { 
     this.form = this.fb.group({
       id:[null],
-      name:['', [Validators.required]],
-      description:['', [Validators.required]],
-      quantity:['', [Validators.required]],
-      picture:['']
+      taskName:['', [Validators.required]],
+      taskDescription:['', [Validators.required]],
+      taskSeconds:['', [Validators.required]],
+      taskImage:['']
     });
   }
 
